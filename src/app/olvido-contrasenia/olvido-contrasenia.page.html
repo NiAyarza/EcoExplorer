@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Recuperar contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-content>
+    <ion-item lines="full">
+      <p>Ingresar E-mail de la cuenta.</p>
+    </ion-item>
+
+    <form>
+      
+      <ion-row>
+        <ion-col>
+          <ion-item lines="full">
+            <ion-label position="floating">Email</ion-label>
+            <ion-input type="text" #email required></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button
+            type="submit"
+            color="danger"
+            (click)="authService.PasswordRecover(email.value)"
+            expand="block">
+            Enviar mail de recuperaicion
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+    </form>
+
+  </ion-content>
+</ion-content>

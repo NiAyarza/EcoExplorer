@@ -1,0 +1,73 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content class="background">
+
+<div class="logologin">    
+  <img src="../../assets/images/logologin.png"> 
+</div>
+
+  <ion-col class="MenuLogin">
+
+    <ion-row>
+      <h1> Ingresa tu cuenta </h1>
+    </ion-row>
+    
+    <form>
+      <ion-row>
+        <ion-label> Email </ion-label>
+        <ion-input type="text" [(ngModel)]="email"> </ion-input>
+      </ion-row>
+
+      <ion-row>
+        <ion-label> Contraseña </ion-label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button
+            color="succes"
+            type="submit"
+            (click)="logIn(email, password)"
+            expand="block">
+            Iniciar sesion</ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button
+            expand="block"
+            color="warning"
+            [routerLink]="['/password-reset']"
+          >
+            Password Reset
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button
+            type="submit"
+            color="danger"
+            (click)="authService.GoogleAuth()"
+            expand="block">
+            iniciar sesion con Google
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <a> Olvidaste tu contraseña </a>
+      </ion-row>
+
+      <ion-row>
+        <a> Crea tu cuenta </a>
+      </ion-row>
+    </form>
+  
+  </ion-col>
+</ion-content>

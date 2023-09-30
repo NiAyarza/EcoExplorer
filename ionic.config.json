@@ -1,0 +1,7 @@
+{
+  "name": "ecoexplorer",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
